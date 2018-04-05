@@ -4,8 +4,11 @@
   "version": "1.0.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "autoprefixer": "^8.2.0",
+    "bulma": "^0.6.2",
     "gatsby": "^1.9.241",
     "gatsby-link": "^1.6.39",
+    "gatsby-plugin-postcss-sass": "^1.0.19",
     "gatsby-plugin-react-helmet": "^2.0.8",
     "react-helmet": "^5.2.0"
   },
