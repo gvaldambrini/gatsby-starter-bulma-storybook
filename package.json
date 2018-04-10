@@ -10,7 +10,10 @@
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-postcss-sass": "^1.0.19",
     "gatsby-plugin-react-helmet": "^2.0.8",
-    "react-helmet": "^5.2.0"
+    "react-helmet": "^5.2.0",
+    "postcss-cssnext-3": "npm:postcss-cssnext@3",
+    "postcss-import-11": "npm:postcss-import@11",
+    "postcss-loader-2": "npm:postcss-loader@2"
   },
   "keywords": [
     "gatsby"
@@ -20,9 +23,21 @@
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
+    "storybook": "start-storybook -p 9001 -c .storybook",
+    "lint": "eslint src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.11.1"
+    "prettier": "^1.11.1",
+    "eslint": "^4.19.1",
+    "eslint-config-prettier": "^2.9.0",
+    "eslint-plugin-prettier": "^2.6.0",
+    "eslint-plugin-react": "^7.7.0",
+    "@storybook/addon-viewport": "^3.4.0",
+    "@storybook/react": "^3.4.0",
+    "storybook-react-router": "^1.0.1",
+    "imports-loader": "^0.8.0",
+    "babel-eslint": "^8.2.2",
+    "babel-loader": "7.1.1"
   }
 }
