@@ -10,28 +10,17 @@ module.exports = (baseConfig, env, defaultConfig) => {
   defaultConfig.module.rules.push({
     test: /\.module\.s[ac]ss$/,
     use: [
-      { loader: `style-loader` },
+      { loader: 'style-loader' },
       {
-        loader: "css-loader",
+        loader: 'css-loader',
         options: {
           modules: true,
           importLoaders: 2,
           localIdentName: "[path]-[local]-[hash:base64:5]"
         }
       },
-      {
-        // Use newer versions of postcss tools
-        loader: `postcss-loader-2`,
-        options: {
-          plugins: loader => [
-            require("postcss-import-11")({ root: loader.resourcePath }),
-            require("postcss-cssnext-3")()
-          ]
-        }
-      },
-      {
-        loader: 'sass-loader',
-      }
+      { loader: 'postcss-loader' },
+      { loader: 'sass-loader' }
     ],
     include: path.resolve(__dirname, "../src")
   });
