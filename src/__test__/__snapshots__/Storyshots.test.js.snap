@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Header default 1`] = `
+<div
+  className="header"
+>
+  <div
+    className="inner"
+  >
+    <h1
+      className="title is-2 has-text-weight-bold"
+    >
+      <a
+        className="link"
+        href="/"
+        onClick={[Function]}
+      >
+        Gatsby
+      </a>
+    </h1>
+  </div>
+</div>
+`;

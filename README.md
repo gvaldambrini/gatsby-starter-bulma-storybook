@@ -9,6 +9,7 @@ A minimal Gatsby starter which includes Bulma and Storybook to create beautiful 
 * (S)CSS modules
 * Prettier
 * ESLint
+* Jest
 
 ## Install
 
@@ -32,6 +33,12 @@ Run the Storybook dev-server (on port 9001):
 
 ```sh
 yarn storybook
+```
+
+Execute the tests:
+
+```sh
+yarn test
 ```
 
 Run the linter:

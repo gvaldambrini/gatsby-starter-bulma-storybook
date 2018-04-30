@@ -12,31 +12,41 @@
     "gatsby-plugin-react-helmet": "^2.0.8",
     "react-helmet": "^5.2.0"
   },
-  "keywords": ["gatsby", "bulma", "storybook"],
+  "keywords": [
+    "gatsby",
+    "bulma",
+    "storybook"
+  ],
   "license": "MIT",
   "scripts": {
-    "preinstall":
-      "node -e 'if(!/yarn\\.js$/.test(process.env.npm_execpath))throw new Error(\"Sorry, but you need to use yarn\")'",
+    "preinstall": "node -e 'if(!/yarn\\.js$/.test(process.env.npm_execpath))throw new Error(\"Sorry, but you need to use yarn\")'",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "lint": "eslint src",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "devDependencies": {
-    "prettier": "^1.11.1",
+    "@storybook/addon-storyshots": "^3.4.3",
+    "@storybook/addon-viewport": "^3.4.0",
+    "@storybook/react": "^3.4.0",
+    "babel-eslint": "^8.2.2",
+    "babel-loader": "7.1.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
     "eslint": "^4.19.1",
     "eslint-config-prettier": "^2.9.0",
     "eslint-plugin-prettier": "^2.6.0",
     "eslint-plugin-react": "^7.7.0",
-    "@storybook/addon-viewport": "^3.4.0",
-    "@storybook/react": "^3.4.0",
-    "storybook-react-router": "^1.0.1",
+    "identity-obj-proxy": "^3.0.0",
     "imports-loader": "^0.8.0",
-    "babel-eslint": "^8.2.2",
-    "babel-loader": "7.1.1",
+    "jest": "^22.4.3",
+    "prettier": "^1.11.1",
+    "react-test-renderer": "15.6.2",
+    "storybook-react-router": "^1.0.1",
     "webpack": "1.15.0"
   },
   "resolutions": {
@@ -44,5 +54,29 @@
     "@storybook/**/postcss-cssnext": "^3.0.0",
     "@storybook/**/postcss-import": "^11.0.0",
     "@storybook/**/postcss-loader": "^2.0.0"
+  },
+  "babel": {
+    "env": {
+      "test": {
+        "presets": [
+          "es2015",
+          "react",
+          "stage-0"
+        ]
+      }
+    }
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "\\.(css|scss)$": "identity-obj-proxy"
+    },
+    "testRegex": "(\\.(test|spec))\\.(jsx|js)$",
+    "testPathIgnorePatterns": [
+      "/node_modules/",
+      "/.cache/"
+    ],
+    "modulePaths": [
+      "src"
+    ]
   }
 }
