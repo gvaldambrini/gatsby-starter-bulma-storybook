@@ -1,23 +1,24 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "gatsby-starter-bulma-storybook",
+  "description": "Gatsby Starter Bulma Storybook",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Gianni Valdambrini",
   "dependencies": {
     "autoprefixer": "^8.2.0",
-    "bulma": "^0.6.2",
+    "bulma": "^0.7.1",
     "gatsby": "^1.9.241",
     "gatsby-link": "^1.6.39",
     "gatsby-plugin-postcss-sass": "^1.0.19",
     "gatsby-plugin-react-helmet": "^2.0.8",
     "react-helmet": "^5.2.0"
   },
-  "keywords": [
-    "gatsby"
-  ],
+  "keywords": ["gatsby", "bulma", "storybook"],
   "license": "MIT",
   "scripts": {
+    "preinstall":
+      "node -e 'if(!/yarn\\.js$/.test(process.env.npm_execpath))throw new Error(\"Sorry, but you need to use yarn\")'",
     "build": "gatsby build",
+    "serve": "gatsby serve",
     "develop": "gatsby develop",
     "format": "prettier --write 'src/**/*.js'",
     "storybook": "start-storybook -p 9001 -c .storybook",
