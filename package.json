@@ -19,7 +19,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "preinstall": "node -e 'if(!/yarn\\.js$/.test(process.env.npm_execpath))throw new Error(\"Sorry, but you need to use yarn\")'",
+    "preinstall": "node ./preinstall-check.js",
     "build": "gatsby build",
     "serve": "gatsby serve",
     "develop": "gatsby develop",
